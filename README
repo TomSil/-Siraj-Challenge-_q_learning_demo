@@ -3,13 +3,9 @@
 This is my entry to Siraj Raval's Q-Learning challenge. I modified this image:
 http://vgmaps.com/Atlas/Wii/LegendOfZelda-TwilightPrincess-ForestTemple.png
 
-and the World.py file so that the modified image could be turned into a simplified bird's eye view of the Forest Temple from
-Legend of Zelda - Twilight Princess for the Q-Learning agent to explore. There are five types of blocks the agent can walk on:
-ground, vines, water, poison and end, which give these rewards respectively: -4, -8, -12, -16 and 3000.
+and the World.py file so that the modified image could be turned into a simplified bird's eye view of the Forest Temple from the Legend of Zelda - Twilight Princess for the Q-Learning agent to explore. There are five types of blocks the agent can walk on: ground, vines, water, poison and end, which give these rewards respectively: -4, -8, -12, -16 and 3000. There are also three possible start positions: the agent is designed to change start point whenever it finds the optimal path from one start point automaticall.
 
-Unfortunately the agent as it currently is tends to get stuck somehow, so I not been able to get any proper experimental 
-results from it except one simple observation: the score of the agent after it had reached the end for the first time was
-greater when the discount was set to 0.6 than when it was set to 0.3.
+Unfortunately the agent as it currently is tends to get stuck somehow, so I not been able to get any proper experimental results from it except one simple observation: the score of the agent after it had reached the end for the first time was greater when the discount was set to 0.6 than when it was set to 0.3.
 
 # Credits
 Galen Puronen: http://gpuronen.deviantart.com/ for the original image used to make the forest temple map.
