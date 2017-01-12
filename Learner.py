@@ -3,7 +3,7 @@ import World
 import threading
 import time
 
-discount = 0.3
+discount = 0.6
 actions = World.actions
 states = []
 Q = {}
@@ -18,10 +18,10 @@ for state in states:
         World.set_cell_score(state, action, temp[action])
     Q[state] = temp
 
-for (i, j, c, w) in World.specials:
-    for action in actions:
-        Q[(i, j)][action] = w
-        World.set_cell_score((i, j), action, w)
+#for (i, j, c, w) in World.specials:
+#    for action in actions:
+#        Q[(i, j)][action] = w
+#        World.set_cell_score((i, j), action, w)
 
 
 def do_action(action):
@@ -84,7 +84,7 @@ def run():
         alpha = pow(t, -0.1)
 
         # MODIFY THIS SLEEP IF THE GAME IS GOING TOO FAST.
-        time.sleep(0.1)
+        #time.sleep(0.2)
 
 
 t = threading.Thread(target=run)
